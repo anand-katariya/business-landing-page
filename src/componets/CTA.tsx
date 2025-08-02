@@ -99,20 +99,20 @@ const CTA = () => {
             </span>
           </motion.div>
 
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 leading-tight">
             Start Your <span className="text-gradient">Fitness Journey</span>
             <br />
             Today
           </h2>
 
-          <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 opacity-90 max-w-2xl md:max-w-3xl mx-auto leading-relaxed">
             Get personalized guidance from our fitness experts. We&apos;re just
             a message away from helping you achieve your goals!
           </p>
 
           <motion.div
             variants={buttonVariants}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 md:mb-12 px-4"
           >
             <motion.a
               href="https://wa.me/yourphonenumber"
@@ -121,9 +121,9 @@ const CTA = () => {
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
-              className="btn-primary flex items-center justify-center gap-4 px-10 py-5 text-white font-bold rounded-2xl text-lg shadow-glow hover:shadow-glow-hover min-w-[280px]"
+              className="btn-primary flex items-center justify-center gap-3 sm:gap-4 px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-white font-bold rounded-2xl text-base sm:text-lg shadow-glow hover:shadow-glow-hover w-full sm:w-auto"
             >
-              <FaWhatsapp className="text-2xl" />
+              <FaWhatsapp className="text-xl sm:text-2xl" />
               Message Us on WhatsApp
             </motion.a>
 
@@ -132,9 +132,9 @@ const CTA = () => {
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
-              className="btn-secondary flex items-center justify-center gap-4 px-10 py-5 font-bold rounded-2xl text-lg min-w-[280px] border-white/30 text-white hover:bg-white hover:text-darkBlue"
+              className="btn-secondary flex items-center justify-center gap-3 sm:gap-4 px-6 sm:px-8 md:px-10 py-4 sm:py-5 font-bold rounded-2xl text-base sm:text-lg w-full sm:w-auto border-white/30 text-white hover:bg-white hover:text-darkBlue"
             >
-              <FaPhone className="text-2xl" />
+              <FaPhone className="text-xl sm:text-2xl" />
               Call Us Now
             </motion.a>
           </motion.div>

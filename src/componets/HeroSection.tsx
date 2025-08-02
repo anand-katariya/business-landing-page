@@ -75,7 +75,7 @@ const HeroSection = () => {
       <motion.div
         variants={floatingVariants}
         animate="float"
-        className="absolute top-20 left-10 text-accent-primary/20 text-6xl"
+        className="absolute top-20 left-10 text-accent-primary/10 text-4xl md:text-6xl hidden sm:block"
       >
         <FaDumbbell />
       </motion.div>
@@ -84,7 +84,7 @@ const HeroSection = () => {
         variants={floatingVariants}
         animate="float"
         style={{ animationDelay: "1s" }}
-        className="absolute top-40 right-20 text-accent-hover/20 text-4xl"
+        className="absolute top-40 right-20 text-accent-hover/10 text-3xl md:text-4xl hidden sm:block"
       >
         <FaHeart />
       </motion.div>
@@ -93,7 +93,7 @@ const HeroSection = () => {
         variants={floatingVariants}
         animate="float"
         style={{ animationDelay: "2s" }}
-        className="absolute bottom-40 left-20 text-darkBlue/20 text-5xl"
+        className="absolute bottom-40 left-20 text-darkBlue/10 text-3xl md:text-5xl hidden sm:block"
       >
         <FaStar />
       </motion.div>
@@ -113,7 +113,7 @@ const HeroSection = () => {
 
           <motion.h1
             variants={textVariants}
-            className="text-6xl md:text-8xl font-bold text-text-primary mb-8 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-text-primary mb-6 md:mb-8 leading-tight px-4"
           >
             Transform Your <span className="text-gradient">Body.</span>
             <br />
@@ -122,7 +122,7 @@ const HeroSection = () => {
 
           <motion.p
             variants={textVariants}
-            className="text-xl md:text-2xl text-text-primary/80 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-text-primary/80 mb-8 md:mb-12 max-w-2xl md:max-w-3xl mx-auto leading-relaxed px-4"
           >
             Join thousands of satisfied clients who achieved their fitness goals
             with our personalized training programs and state-of-the-art
@@ -132,20 +132,20 @@ const HeroSection = () => {
           <motion.div
             variants={buttonVariants}
             animate={inView ? ["visible", "pulse"] : "hidden"}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
           >
             <motion.a
               href="/book-trial"
-              className="btn-primary flex items-center justify-center gap-3 px-10 py-5 text-white font-bold rounded-2xl text-lg shadow-glow hover:shadow-glow-hover"
+              className="btn-primary flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 md:px-10 py-4 sm:py-5 text-white font-bold rounded-2xl text-base sm:text-lg shadow-glow hover:shadow-glow-hover w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Book a Free Trial <FaArrowRight className="text-xl" />
+              Book a Free Trial <FaArrowRight className="text-lg sm:text-xl" />
             </motion.a>
 
             <motion.a
               href="/learn-more"
-              className="btn-secondary flex items-center justify-center gap-3 px-10 py-5 font-bold rounded-2xl text-lg"
+              className="btn-secondary flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 md:px-10 py-4 sm:py-5 font-bold rounded-2xl text-base sm:text-lg w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -156,19 +156,31 @@ const HeroSection = () => {
           {/* Stats */}
           <motion.div
             variants={textVariants}
-            className="flex justify-center items-center gap-12 mt-16 pt-8 border-t border-text-primary/10"
+            className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 md:gap-12 mt-12 md:mt-16 pt-6 md:pt-8 border-t border-text-primary/10 px-4"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-gradient">10K+</div>
-              <div className="text-text-primary/70">Happy Members</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gradient">
+                10K+
+              </div>
+              <div className="text-text-primary/70 text-sm sm:text-base">
+                Happy Members
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gradient">50+</div>
-              <div className="text-text-primary/70">Expert Trainers</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gradient">
+                50+
+              </div>
+              <div className="text-text-primary/70 text-sm sm:text-base">
+                Expert Trainers
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gradient">95%</div>
-              <div className="text-text-primary/70">Success Rate</div>
+              <div className="text-2xl sm:text-3xl font-bold text-gradient">
+                95%
+              </div>
+              <div className="text-text-primary/70 text-sm sm:text-base">
+                Success Rate
+              </div>
             </div>
           </motion.div>
         </motion.div>

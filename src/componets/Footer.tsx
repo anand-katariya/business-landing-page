@@ -89,14 +89,14 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/5 via-transparent to-accent-hover/5" />
 
       <div className="container mx-auto px-6 relative z-10 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Contact Info Column */}
           <motion.div variants={itemVariants}>
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center mr-4">
                 <span className="text-2xl">💪</span>
               </div>
-              <h3 className="text-2xl font-bold">
+              <h3 className="text-xl sm:text-2xl font-bold">
                 Fit<span className="text-gradient">Life</span>
               </h3>
             </div>
@@ -130,7 +130,7 @@ const Footer = () => {
 
           {/* Quick Links Column */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 md:mb-8">
               {footerData.links.title}
             </h3>
             <ul className="space-y-4">
@@ -171,7 +171,7 @@ const Footer = () => {
 
           {/* Social Media Column */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 md:mb-8">
               {footerData.social.title}
             </h3>
             <p className="text-white/80 mb-8 leading-relaxed">

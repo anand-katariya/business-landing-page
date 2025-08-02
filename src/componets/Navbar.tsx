@@ -86,10 +86,10 @@ const Navbar = () => {
           custom={0}
           className="flex items-center"
         >
-          <Link href="/" className="text-3xl font-bold">
+          <Link href="/" className="text-2xl sm:text-3xl font-bold">
             <span className="text-text-primary">Fit</span>
             <span className="text-gradient">Life</span>
-            <span className="text-2xl ml-1">💪</span>
+            <span className="text-xl sm:text-2xl ml-1">💪</span>
           </Link>
         </motion.div>
 

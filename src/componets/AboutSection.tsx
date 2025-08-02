@@ -1,7 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaArrowRight, FaCheckCircle, FaUsers, FaTrophy, FaClock } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaCheckCircle,
+  FaUsers,
+  FaTrophy,
+  FaClock,
+} from "react-icons/fa";
 import Image from "next/image";
 
 const AboutSection = () => {
@@ -53,16 +59,19 @@ const AboutSection = () => {
   ];
 
   return (
-    <section ref={ref} className="py-24 bg-gradient-hero relative overflow-hidden">
+    <section
+      ref={ref}
+      className="py-24 bg-gradient-hero relative overflow-hidden"
+    >
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/5 via-transparent to-darkBlue/5" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
-          className="flex flex-col lg:flex-row items-center gap-16"
+          className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16"
         >
           {/* Image Column - Left Side */}
           <motion.div
@@ -81,7 +90,7 @@ const AboutSection = () => {
                   priority
                 />
               </div>
-              
+
               {/* Floating stats card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -95,7 +104,9 @@ const AboutSection = () => {
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-gradient">95%</div>
-                    <div className="text-text-primary/70 text-sm">Success Rate</div>
+                    <div className="text-text-primary/70 text-sm">
+                      Success Rate
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -104,11 +115,11 @@ const AboutSection = () => {
 
           {/* Text Column - Right Side */}
           <motion.div variants={textVariants} className="w-full lg:w-1/2">
-            <span className="inline-block px-4 py-2 bg-accent-primary/10 text-accent-primary rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block px-4 py-2 bg-accent-primary/10 text-accent-primary rounded-full text-sm font-semibold mb-4 md:mb-6">
               🏆 About Our Excellence
             </span>
-            
-            <h2 className="text-5xl md:text-6xl font-bold text-text-primary mb-8 leading-tight">
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 md:mb-8 leading-tight">
               Your Journey to{" "}
               <span className="text-gradient">Fitness Excellence</span>
             </h2>
@@ -147,8 +158,12 @@ const AboutSection = () => {
                   <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white mx-auto mb-3">
                     {stat.icon}
                   </div>
-                  <div className="text-2xl font-bold text-gradient">{stat.number}</div>
-                  <div className="text-text-primary/70 text-sm">{stat.label}</div>
+                  <div className="text-2xl font-bold text-gradient">
+                    {stat.number}
+                  </div>
+                  <div className="text-text-primary/70 text-sm">
+                    {stat.label}
+                  </div>
                 </motion.div>
               ))}
             </div>

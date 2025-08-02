@@ -105,9 +105,22 @@ const TestimonialsSection = () => {
     setCurrentIndex(index);
   };
 
-  // Determine which testimonials to show (3 at a time)
+  // Determine which testimonials to show based on screen size
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const visibleTestimonials = [];
-  for (let i = 0; i < 3; i++) {
+  const cardsToShow = isMobile ? 1 : 3;
+  for (let i = 0; i < cardsToShow; i++) {
     const index = (currentIndex + i) % testimonials.length;
     visibleTestimonials.push(testimonials[index]);
   }
@@ -162,13 +175,13 @@ const TestimonialsSection = () => {
           variants={containerVariants}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-2 bg-accent-primary/10 text-accent-primary rounded-full text-sm font-semibold mb-6">
+          <span className="inline-block px-4 py-2 bg-accent-primary/10 text-accent-primary rounded-full text-sm font-semibold mb-4 md:mb-6">
             ⭐ What Our Members Say
           </span>
-          <h2 className="text-5xl md:text-6xl font-bold text-text-primary mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-4 md:mb-6">
             Real Stories, <span className="text-gradient">Real Results</span>
           </h2>
-          <p className="text-xl text-text-primary/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-text-primary/80 max-w-2xl md:max-w-3xl mx-auto leading-relaxed">
             Don&apos;t just take our word for it - hear from our amazing
             community of fitness enthusiasts
           </p>
@@ -191,10 +204,10 @@ const TestimonialsSection = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8"
+                    className="w-full px-2 sm:px-4 mb-6 md:mb-8"
                     transition={{ duration: 0.5 }}
                   >
-                    <div className="bg-white rounded-3xl p-8 shadow-card hover:shadow-card-hover transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
+                    <div className="bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-card hover:shadow-card-hover transition-all duration-500 h-full flex flex-col group relative overflow-hidden">
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/5 to-accent-hover/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
